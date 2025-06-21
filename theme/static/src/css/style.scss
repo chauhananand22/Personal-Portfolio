@@ -1,0 +1,258 @@
+body {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.29);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    #an_header_section_main {
+        position: relative;
+        .an_navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.29);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5.6px);
+            transition: all 0.3s ease;
+            .an_navbar_brand {
+                width: 70px;
+                height: 70px;
+                padding: 0;
+                margin: 0;
+                .an_header_icon {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .an_navbar_collapse {
+                justify-content: center;
+                .an_navbar_nav {
+                    gap: 10px;
+                    .an_nav_item {
+                        padding: 0 10px;
+                        .an_nav_link {
+                            position: relative;
+                            color: #705546;
+                            font-size: 18px;
+                            font-weight: 500;
+                            &::after {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                margin: auto;
+                                width: 0%;
+                                content: '.';
+                                color: transparent;
+                                background: #887552;
+                                height: 1px;
+                                transition: all .5s;
+                            }
+                            &:hover {
+                                &::after {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .an_nav_link.active {
+                            &::after {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .an_navbar.sticky {
+            position: fixed;
+            top: 0;
+        }
+    }
+}
+
+// HERO SECTION START
+// HERO SECTION START
+#an_hero_section_main {
+    background: url(/theme/static/src/img/an_hero.webp) no-repeat center center/cover;
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    min-height: 750px;
+    z-index: 1;
+    .an_hero_section_img {
+        // background: linear-gradient(90deg, rgba(211, 220, 227, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        width: 100%;
+        height: 100%;
+        .an_hero_main_div {
+            top: 30%;
+            position: absolute;
+            left: 9%;
+            .an_hero_title_main {
+                .an_hero_title {
+                    font-size: 30px;
+                    font-weight: 700;
+                    color: #705546;
+                    .an_hero_title_span {
+                        background: linear-gradient(90deg, rgba(112, 85, 70, 1) 0%, rgba(136, 117, 82, 1) 50%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+                .an_hero_sub_title {
+                    font-size: 50px;
+                    font-weight: 700;
+                    color: #887552;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    width: 0;
+                    border-right: 2px solid #887552;
+                    animation: typing 3s steps(50, end) forwards infinite, blink 0.7s step-end infinite;
+                }
+                .an_hero_intro {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #887552;
+                }
+                .an_colabration_btn {
+                    color: #fff;
+                    background: #705546;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        background: #9badcb;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 11ch;
+    }
+    /* adjust based on your text length */
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+// HERO SECTION END
+// EXPERIENCE SECTION START
+#an_experience_Section_main {
+    padding-block-start: 100px;
+    padding-block-end: 100px;
+    .an_experience_card {
+        text-align: center;
+        padding: 30px 20px;
+        transition: all 0.5s;
+        border-radius: 5px;
+        .an_experience_card_img_main {
+            width: 130px;
+            height: 70px;
+            margin: 10px auto;
+            .an_experience_img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                opacity: 0.7;
+                transition: all 0.5s;
+            }
+        }
+    }
+}
+
+// EXPERIENCE SECTION end
+// SERVICE SECTION START
+#an_service_section_main {
+    background: linear-gradient(270deg, rgba(211, 220, 227, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    padding-block-start: 100px;
+    padding-block-end: 100px;
+    .an_service_left_col_main {
+        .an_service_col_heading_main {
+            margin-bottom: 3px;
+            .an_service_sub_heading {
+                display: inline-block;
+                font-size: 16px;
+                background: linear-gradient(90deg, rgb(112, 85, 70) 0%, rgb(136, 117, 82) 50%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            .an_service_title_heading {
+                font-size: 35px;
+                font-weight: 700;
+                color: #887552;
+            }
+        }
+        .an_service_description {
+            font-size: 16px;
+            color: #887552;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        .an_service_img_left {
+            position: relative;
+            display: inline-block;
+            .an_service_img_inner_main {
+                padding: 30px 10px;
+                background-color: rgba(155, 173, 203, 0.29);
+                border-radius: 10px;
+                -webkit-mask: url(/theme/static/src/img/service/left_bg_svg.svg);
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                -webkit-mask-position: top center;
+                mask-position: top center;
+                -webkit-mask-size: auto;
+                mask-size: auto;
+                .an_service_img_inner {
+                    border-radius: inherit;
+                    -webkit-mask: url(/theme/static/src/img/service/left_bg_svg.svg);
+                    -webkit-mask-repeat: no-repeat;
+                    mask-repeat: no-repeat;
+                    -webkit-mask-position: top center;
+                    mask-position: top center;
+                    -webkit-mask-size: auto;
+                    mask-size: auto;
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                        border-radius: inherit;
+                    }
+                }
+            }
+            .an_service_img__shape {
+                width: 30px;
+                height: 30px;
+                border-radius: 5px;
+                background-color: #9badcb;
+                position: absolute;
+                z-index: 2;
+            }
+            .an_service_img__shape_1 {
+                left: 80px;
+                bottom: 60px;
+            }
+            .an_service_img__shape_2 {
+                top: 60px;
+                right: 80px;
+            }
+        }
+    }
+}
+
+// SERVICE SECTION END
